@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="surveyform.css" type="text/css">
+<title>Student Survey Form</title>
+</head>
+<body>
+	<!-- Header Section -->
+	<div id="header" align="center">
+		<h1>Student Survey Form</h1>
+	</div>
+
+	<!-- Form Section -->
+	<div id="survey">
+		<form method="post" autocomplete="on" action="">
+			<div align="center">
+				<table>
+					<tr>
+						<td><label><b>First Name </b></label></td>
+						<td><input name="firstName" required autofocus="autofocus"
+							type="text" /></td>
+					</tr>
+					<tr>
+						<td><label><b>Last Name </b></label></td>
+						<td><input name="lastName" required type="text" /></td>
+					</tr>
+					<tr>
+						<td><label><b>Address </b></label></td>
+						<td><input name="street" required type="text" /></td>
+					</tr>
+					<tr>
+						<td><label><b>City </b></label></td>
+						<td><input name="city" required type="text" /></td>
+					</tr>
+					<tr>
+						<td><label><b>State </b></label></td>
+						<td><input name="state" required type="text" /></td>
+					</tr>
+					<tr>
+						<td><label><b>Zip Code </b></label></td>
+						<td><input name="zip" required type="text" /></td>
+					</tr>
+					<tr>
+						<td><label><b>Contact No. </b></label></td>
+						<td><input name="phone" required placeholder="(___)___-____"
+							type="text" /></td>
+					</tr>
+					<tr>
+						<td><label><b>Email Address</b></label></td>
+						<td><input name="email" required type="text" /></td>
+					</tr>
+
+					<tr>
+						<td><label><b>Date</b> </label></td>
+						<td><input placeholder="MM/DD/YYYY" type="date" required></td>
+					</tr>
+					<tr>
+						<td><label><b>What did you like most about the
+									university? </b></label></td>
+						<td><input name="students" type="checkbox" value="students" />
+							Students <input name="location" type="checkbox" value="location" />
+							Location <input name="campus" type="checkbox" value="campus" />
+							Campus <input name="atmosphere" type="checkbox"
+							value="atmosphere" /> Atmosphere <input name="dormRooms"
+							type="checkbox" value="dormRooms" /> Dorm Rooms <input
+							name="sports" type="checkbox" value="sports" /> Sports</td>
+					</tr>
+					<tr>
+						<td><label><b>Where did you hear about the
+									university?</b></label></td>
+						<td><input name="sourceOfInterest" type="radio"
+							value="friends">Friends <input
+							name="sourceOfInterest" type="radio" value="television" />Television
+							<input name="sourceOfInterest" type="radio" value="internet" />Internet
+							<input name="sourceOfInterest" type="radio" value="others" />Others
+						</td>
+					</tr>
+
+					<tr>
+						<td><label><b>How likely are you to recommend the
+									university to prospective students? </b></label></td>
+						<td><select name="rating">
+								<option value="1">Very Likely</option>
+								<option value="2">Likely</option>
+								<option value="3">Unlikely</option>
+						</select></td>
+					</tr>
+
+					<tr>
+						<td><label><b>Comments</b></label></td>
+						<td><textarea name="comments" rows="4" cols="36"
+								placeholder="Enter comments here."></textarea></td>
+					</tr>
+				</table>
+
+				<button name="submit" type="submit" id="surveySubmit">Submit</button>
+				<button name="cancel" type="reset" id="surveyCancel">Cancel</button>
+
+			</div>
+		</form>
+	</div>
+</body>
+</html>

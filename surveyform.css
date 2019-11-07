@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Saira+Stencil+One&display=swap');
+
+body {
+	background-color: #c7dff0;
+	font-family: "Raleway", sans-serif
+}
+
+h1 {
+	border-style: solid;
+	border-color: #354775;
+	border-width: 5px;
+	border-radius: 5px;
+	width: 80%;
+}
+
+table {
+	width: 80%;
+}
+
+h1, h2, h3, h4 {
+	color: #354775;
+	font-family: "Raleway", sans-serif
+}
+
+tr, td {
+	text-align: left;
+	padding: 10px;
+	font-size: 20;
+}
+
+td {
+	color: #354775;
+}
+
+.submitBtn {
+	padding: 10px 25px;
+	font-size: 20;
+	color: #354775;
+}
+
+#survey input[type="text"], #survey input[type="email"], #survey input[type="tel"],
+	#survey input[type="date"], #survey textarea, #survey select {
+	width: 95%;
+	border: 1px solid #CCC;
+	background: #FFF;
+	margin: 0 0 5px;
+	padding: 10px;
+}
+
+table {
+	border-style: solid;
+	border-color: #354775;
+	border-width: 5px;
+	border-radius: 5px;
+	font-family: "Raleway", sans-serif
+}
+
+#survey button[type="submit"], #survey button[type="reset"] {
+	cursor: pointer;
+	width: 30%;
+	border: none;
+	background: #354775;
+	color: #FFF;
+	margin: 10px 0 5px;
+	padding: 10px;
+	font-size: 15px;
+}
