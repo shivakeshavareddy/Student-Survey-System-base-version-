@@ -1,8 +1,8 @@
 pipeline {
 	agent any
 	environment {
-		DOCKER_CREDS = credentials('docker')
-		DOCKER_IMAGE_NAME = "parnavi/survey-form-image-gcp"
+		DOCKER_CREDS = credentials('pop')
+		DOCKER_IMAGE_NAME = "parnavi/image-keshav"
 		img = ''
 	}
     stages {
@@ -19,9 +19,9 @@ pipeline {
 			steps {
 				script {
 					echo "${env.BUILD_ID}"
-					img = docker.build "parnavi/survey-form-image-gcp:${env.BUILD_ID}"
+					img = docker.build "parnavi/image-keshav:${env.BUILD_ID}"
 
-					withDockerRegistry(credentialsId: 'docker', url: '') {
+					withDockerRegistry(credentialsId: 'pop', url: '') {
 						echo "Creating docker image and pusing to docker hub ..."
 
 						img.push "${env.BUILD_ID}"
@@ -33,10 +33,10 @@ pipeline {
 	    
 		stage("UpdateDeployment") {
 			steps{
-				sh 'gcloud container clusters get-credentials kube-cluster --zone us-east4-a'
+				sh 'gcloud container clusters get-credentials fc --zone us-east1-b'
 				sh 'kubectl config view'
 				sh "kubectl get deployments"
-				sh "kubectl set image deployment/survey-form-gcp survey-form-image-gcp=parnavi/survey-form-image-gcp:${env.BUILD_ID}"
+				sh "kubectl set image deployment/dep-one image-keshav=parnavi/image-keshav:${env.BUILD_ID}"
 			}
 			
 		}
